@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contracts</title>
+</head>
+<body>
+<h1>List of all Contracts</h1>
+<table>
+    <tr>
+        <td>Contract</td>
+        <td>Fund Size</td>
+        <td>Total Invested</td>
+        <td>Total Pre-Tax Invested</td>
+        <td>Status</td>
+        <td>Investor Bill Rate</td>
+        <td>Service Charge</td>
+        <td>IRR</td>
+        <td>ROI</td>
+    </tr>
+    <tr th:each="cont: ${contractList}">
+        <td th:text=1>Room Name</td>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<#-- @ftlvariable name="" type="com.razorpay.PaymentView" -->
+<button id="rzp-button1">Pay with Razorpay</button>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<form action="localhost:8080/investor/wallet/updateOrder" method="POST" name="razorpayForm">
+  <input id="razorpay_payment_id" type="hidden" name="razorpay_payment_id" />
+  <input id="razorpay_order_id" type="hidden" name="razorpay_order_id" />
+  <input id="razorpay_signature" type="hidden" name="razorpay_signature" />
+</form>
+<script>
+  // Checkout details as a json
+  var options = {
+    "name": "HYPERSROT",
+    "description": "Invest into Srot",
+    "image": "https://cdn.razorpay.com/logos/I7e2KpwjikUoNR_medium.png",
+    "prefill": {
+      "name": "Vikas Rana",
+      "email": "vikas.rana@gmail.com",
+      "contact": "+919972638091",
+    },
+    "notes": {
+      "address": "Hello World",
+      "merchant_order_id": "12312321",
+    },
+    "theme": {
+      "color": "#062124"
+    },
+    "order_id": "order_J180DunnUVVXFV",
+  }
+
+  /**
+   * The entire list of Checkout fields is available at
+   * https://docs.razorpay.com/docs/checkout-form#checkout-fields
+   */
+// Boolean whether to show image inside a white frame. (default: true)
+  options.theme.image_padding = false;
+
+  options.handler = function(res) {
+    document.getElementById('razorpay_payment_id').value = res.razorpay_payment_id;
+    document.getElementById('razorpay_order_id').value = res.razorpay_order_id;
+    document.getElementById('razorpay_signature').value = res.razorpay_signature;
+    document.razorpayForm.submit();
+  }
+
+  options.modal = {
+    ondismiss: function() {
+      console.log("This code runs when the popup is closed");
+    },
+    // Boolean indicating whether pressing escape key
+    // should close the checkout form. (default: true)
+    escape: true,
+    // Boolean indicating whether clicking translucent blank
+    // space outside checkout form should close the form. (default: false)
+    backdropclose: false
+  };
+
+  var rzp = new Razorpay(options);
+
+  document.getElementById('rzp-button1').onclick = function(e){
+    rzp.open();
+    e.preventDefault();
+  }
+</script>
+</body>
+</html>

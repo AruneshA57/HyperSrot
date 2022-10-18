@@ -1,0 +1,9 @@
+{
+  "Source":"Srot - Grow your wealth <info@srot.io>",
+  "Template": "InvestorWelcomeEmail",
+  "Destination": {
+    "ToAddresses": [ "prachrana0@gmail.com"
+    ]
+  },
+  "TemplateData": "{ \"name\":\"Vikas Rana\" }"
+}

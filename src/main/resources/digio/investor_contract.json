@@ -1,0 +1,89 @@
+{
+  "signers": [
+    {
+      "identifier": "<<investor_identifier>>",
+      "name": "<<investor_name>>",
+      "sign_type": "electronic"
+    },
+    {
+      "identifier": "hypersrot@gmail.com",
+      "name": "Hypersrot Pvt Ltd",
+      "sign_type": "electronic"
+    }
+  ],
+  "expire_in_days": 10,
+  "send_sign_link": false,
+  "sequential": true,
+  "notify_signers": false,
+  "display_on_page": "custom",
+  "sign_coordinates": {
+    "<<investor_identifier>>": {
+      "1": [
+        {
+          "llx": 65.00028220858896,
+          "lly": 53.010065028901714,
+          "urx": 190.9945306748466,
+          "ury": 84.00121387283235
+        }
+      ],
+      "2": [
+        {
+          "llx": 73.25164417177913,
+          "lly": 663.8412095375722,
+          "urx": 212.25011042944783,
+          "ury": 694.8323583815029
+        }
+      ]
+    },
+    "hypersrot@gmail.com": {
+      "1": [
+        {
+          "llx": 408,
+          "lly": 57.006903901734084,
+          "urx": 526.993481595092,
+          "ury": 85.00265895953756
+        }
+      ],
+      "2": [
+        {
+          "llx": 73.6258527607362,
+          "lly": 488.9856784682081,
+          "urx": 209.6225935582822,
+          "ury": 517.9828786127168
+        }
+      ]
+    }
+  },
+  "file_name": "<<file_name>>.pdf",
+  "estamp_request": {
+    "tags": {
+      "KA-100-KA_100": 1
+    },
+    "note_content": "DUMMY TEXT",
+    "sign_coordinates": {}
+  },
+  "callback": "<<file_name>>",
+  "templates": [
+    {
+      "template_key": "TMP220121140415064Z47ZUXA8LCYUM9",
+      "template_values": {
+        "dd": "<<day>>",
+        "mm": "<<month>>",
+        "yyyy": "<<year>>",
+        "Aadhaar": "<<investor_aadhar>>",
+        "PAN_Number": "<<investor_pan>>",
+        "Email_id": "<<investor_email>>",
+        "Mobile_number": "<<investor_mobile>>",
+        "Name": "<<investor_name>>",
+        "contract_id": "<<contract_id>>",
+        "invoice_bill": "<<invoice_bill>>",
+        "gst_amount": "<<gst_amount>>",
+        "cost_amount": "<<cost_amount>>",
+        "term_in_months": "<<term_months>>",
+        "capacity_in_KWp": "<<listing_capacity>>",
+        "rental_roi": "<<listing_roi>>",
+        "monthly_rent": "<<listing_rent>>"
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+**/*.log
+Dockerfile
+.git
+.gitignore
+.run
+.mvn
+.idea
+.dockerignore

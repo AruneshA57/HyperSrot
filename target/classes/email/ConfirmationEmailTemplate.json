@@ -1,0 +1,9 @@
+{
+  "Template": {
+    "TemplateName": "ConfirmationEmailTemplate",
+    "SubjectPart": "SROT, Email Verification!",
+    "HtmlPart": "<h3>Welcome to Srot Platform</h3><p>Please confirm your email address by clicking the below link</p>Click here: <a href={{confirmationLink}}>{{confirmationLink}}</a><br/><p>If you have not signup on https://srot.io/, please reach out to contact@srot.io to report this activity.</p>",
+    "TextPart": "Welcome to Srot Platform,\r\nPlease confirm your email address by clicking the below link:\r\n{{confirmationLink}}\r\nIf you have not signup on https://srot.io/, please reach out to contact@srot.io to report this activity."
+  }
+}
+

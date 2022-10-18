@@ -1,0 +1,7 @@
+{
+  "Template": {
+    "TemplateName": "EA-Coupon-Code",
+    "SubjectPart": "SROT, OnBoarding Mail",
+    "HtmlPart": "Welcome to Srot,<br>CODE: {{code}}"
+  }
+}

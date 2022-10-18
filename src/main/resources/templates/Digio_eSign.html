@@ -1,0 +1,38 @@
+<!--https://docs.google.com/document/d/1e2swIytXaHRZl_pYeMysn0DS85vBiY9TXEsb2og2D8M/edit#-->
+<!--https://docs.google.com/document/d/1UlS294lvacbHAFyB9cYsssDsfAOhnd7mMWRPhH3ANFg/edit#-->
+<!--https://docs.google.com/document/d/1_pfbEEaqVDsRH3yRsouHZiJ7QZA1pnnM8_hxBDC4IQM/edit-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="rzp-button1">Sign Contract</button>
+<script type="text/javascript" src="https://ext.digio.in/sdk/v9/digio.js"></script>
+
+<script>
+  var options = {
+    environment : "sandbox",
+    callback : function (response){
+      if(response.hasOwnProperty("error_code")){
+        return console.log("ERROR has occurred, ERROR:" + response.error_code + " " + response.message);
+      }
+      console.log("Signing completed successfully, DocID:" + response.digio_doc_id + " txn_id:" + response.txn_id + ", " + response.message);
+    },
+    logo : "https://cdn.razorpay.com/logos/I7e2KpwjikUoNR_medium.png",
+    theme : {
+      primaryColor : "#062124",
+      secondaryColor : "#062124"
+    }
+  }
+  var digio = new Digio(options);
+  document.getElementById('rzp-button1').onclick = function(e){
+    digio.init();
+    digio.submit("DID220212215009362I7Z71RJ6ZTRD52", "rana.vikas007@gmail.com");
+    e.preventDefault();
+  }
+</script>
+</body>
+</html>

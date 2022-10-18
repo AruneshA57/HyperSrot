@@ -1,0 +1,7 @@
+{
+  "Template": {
+    "TemplateName": "Webinar-Invitation_EA-Coupon-Code",
+    "SubjectPart": "SROT, OnBoarding Mail",
+    "HtmlPart": "Welcome to Srot, here is your webinar link: <a href={{link}}>{{link}}</a><br>CODE: {{code}}"
+  }
+}
